@@ -1,3 +1,2 @@
-this Geckozil from united Gitzub nation
-we speak in Javalian and
-nice to meet me @_!
+This repo will be used to store java algorithm solutions
+feel free to pull @_@ 
