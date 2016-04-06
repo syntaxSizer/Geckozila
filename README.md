@@ -1,1 +1,1 @@
-This repo will be used to store java algorithm solution
+This repo will be used to store java,js,python algorithm solution
