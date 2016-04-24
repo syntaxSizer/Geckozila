@@ -4,22 +4,45 @@
 <head>
     <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
-    <title>keypress-function</title>
+    <title>Display message on html page</title>
 </head>
 
 <body>
+    <!--  an empt div that will host the messages -->
+    <div id='messagesDiv'></div>
+    <!--   simple html form-->
     <input type='text' id='nameInput' placeholder='Name'>
     <input type='text' id='messageInput' placeholder='Message'>
+    <!-- firebase script to send data to your data base -->
     <script>
-        var myDataRef = new Firebase('https://o2j0fz3t3u4.firebaseio-demo.com/');
+        // create an object of firebase and insalize it with the refernce to your database
+        var myDataRef = new Firebase('https://intense-heat-7058.firebaseio.com/');
+        //assigen event to the handler in this case our handler is the message input input
         $('#messageInput').keypress(function(e) {
+            //we will tell the script 'do somthing' when keycode 13 pressed  (Enter key)
+            // e is short for event
             if (e.keyCode == 13) {
+                // assigning value of nameinput input to name
                 var name = $('#nameInput').val();
+                // assigning value of messageinput to text
                 var text = $('#messageInput').val();
-                myDataRef.set('User ' + name + ' says ' + text);
+                // use push the data to the DB
+                myDataRef.push({
+                    name: name,
+                    text: text
+                });
                 $('#messageInput').val('');
             }
         });
+        myDataRef.on('child_added', function(snapshot) {
+            var message = snapshot.val();
+            displayChatMessage(message.name, message.text);
+        });
+        //retriving data from the DB to be displyed in our empty div
+        function displayChatMessage(name, text) {
+            $('<div/>').text(text).prepend($('<em/>').text(name + ': ')).appendTo($('#messagesDiv'));
+            $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+        };
 
     </script>
 </body>
