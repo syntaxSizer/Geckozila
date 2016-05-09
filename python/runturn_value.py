@@ -26,5 +26,5 @@ iq=divide(100,2)
 print "Age: %d , Height: %d , Weight: %d, IQ: %d " % (age,height,weight,iq)
 
 what = add(age,subtract(height,multiply(weight,divide(iq,2))))
-what_by_hand = 35-(74-(180*(50/2)))
+what_by_hand = 35-(74-(-180*(50/2)))
 print what_by_hand
