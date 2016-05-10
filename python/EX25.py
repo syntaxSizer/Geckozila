@@ -11,4 +11,6 @@ def sort_words(words)
     return sorted(words)
 
 
-
+def print_first_word(words):
+#print the last word after poping it off
+    
