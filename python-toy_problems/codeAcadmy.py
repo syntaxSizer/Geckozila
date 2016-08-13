@@ -231,4 +231,55 @@ one_elem_tuple
 # Dictionary Operations
 # Also, a  key:value  pair can be deleted using the  del  keyword, like so:
 
->>> 
+>>> vowels = {1: 'a', 2: 'e', 3: 'i', 4: 'o', 5:'u'}
+>>> del(vowels[1])
+>>> vowels
+{2: 'e', 3: 'i', 4: 'o', 5: 'u'}
+
+# Built-in Methods
+# Dictionaries support many built­in methods, but some of the most useful ones are:
+# keys() ,  values() ,  iteritems() ,  itervalues() , and  has_key() .
+
+>>> vowels = {1: 'a', 2: 'e', 3: 'i', 4: 'o', 5:'u'}
+
+>>> vowels.key()
+[1, 2, 3, 4, 5]
+
+>>> vowels.values()
+['a', 'e', 'i', 'o', 'u']
+
+# The methods  iteritems()  and  itervalues()  return iterators, so they can be
+# used in  for  loops. Here's an example:
+
+>>> for i , x in vowels.iteritems():
+
+1 a
+2 e
+3 i
+4 o
+5 u
+
+>>> for i in vowels.itervalues()
+a
+e
+i
+o
+u
+
+>>> for i in vowels.iter
+
+
+# insertion sort 
+def insertion_sort(mylist):
+	for j in xrange(1,len(mylist)):
+		current_value=mylist[j]
+		position = j
+
+	while position>0 and mylist[position-1]>current_value:
+
+		mylist[position] = mylist[position-1]
+		position = -1
+	mylist[position]=current_value
+mylist=[2,7,45,3,23,567,65]
+insertion_sort(mylist)
+print (mylist)
