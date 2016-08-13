@@ -185,3 +185,40 @@ vowels = ['a','e','i','o','u']
 {x for x in 'maintenance' if x not in vowels}
 # not vowels
 set(['c', 'm', 't', 'n'])
+
+# FrozenSets
+# immutable 
+frozen = frozenset([1, 2, 3])
+
+''' Tuples
+Tuples are immutable, but can hold mutable objects.
+'''
+# How to Construct a Tuple
+my_empyt_tuple = ()
+my_empyt_tuple
+()
+
+# Constructing a tuple with one element requires a trailing comma. Example:
+
+one_elem_tuple = 'a',
+one_elem_tuple
+('a',)
+
+# Constructing tuple with multiplre values require list of values comma separated 
+>>> s = 'a', 'b', [1, 2, 3]
+>>> s
+('a', 'b', [1, 2, 3])
+
+# Dictionaries
+# How to Construct a Dictionary
+>>> vowels = {1: 'a', 2: 'e', 3: 'i', 4: 'o', 5:'u'}
+>>> vowels
+{1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u'}
+
+# another way is
+>>> {x:x*x for x in (1, 2, 3)}
+{1: 1, 2: 4, 3: 9}
+
+# You can also use the keyword  dict  and get the same result.
+>>> dict([(1,'a'), (2,'e'), (3,'i'), (4,'o'), (5,'u')])
+{1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u'}
