@@ -222,3 +222,13 @@ one_elem_tuple
 # You can also use the keyword  dict  and get the same result.
 >>> dict([(1,'a'), (2,'e'), (3,'i'), (4,'o'), (5,'u')])
 {1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u'}
+
+# If the keys are strings, you can use the following keyword expression:
+>>> dict(a=1, e=2, i=3, o=4, u=5)
+# it done not work the other way around if the key is numeric 
+{'i': 3, 'u': 5, 'e': 2, 'a': 1, 'o': 4}
+
+# Dictionary Operations
+# Also, a  key:value  pair can be deleted using the  del  keyword, like so:
+
+>>> 
