@@ -14,4 +14,7 @@ def is_prime(x):
             else:
                 Prime = True
     return Prime
+    print n
+x = 100
+is_prime(x)
 
