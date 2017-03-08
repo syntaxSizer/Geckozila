@@ -1,1 +1,2 @@
-This repo will be used to store java,js,python algorithm solution
+###java write once run anywhere ...
+java fundamentals
